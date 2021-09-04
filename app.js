@@ -7,7 +7,7 @@ let dejaFait = false;
 const today = new Date();
 const nextWeek = new Date(today.getTime() + 7*24*60*60*1000);
 let day = ('' + nextWeek).slice(8,10);
-let month = ('0' + (today.getMonth() + 1));
+let month = ('0' + (nextWeek.getMonth() + 1));
 let year = today.getFullYear();
 
 document.querySelector('input[type=date]').value = `${year}-${month}-${day}`;
